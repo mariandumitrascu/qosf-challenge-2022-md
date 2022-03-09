@@ -2,13 +2,23 @@
 
 ## Task 3 - Encoding and Classifier
 
-You can find task definition [here]('http://./Cohort 5 Screening Tasks.pdf').
+You can find task definition [here](https://github.com/mariandumitrascu/qosf-challenge-2022-md/blob/main/Cohort%205%20Screening%20Tasks.pdf)
 
 ## Approach and Solution
 
 
-<br>
 To approach this task I used PennyLane framework, and 7 types of encoding, making use of all out of the box PennyLane embedding functions (with the exception of basis encoding) as well as one angle encoding from scratch. I wanted to use this opportunity to go through all options available at this time regarding Variational Circuits Classifiers, and PennyLane framework provides this.
+
+<br><br>
+You can see the data profile in: [./task-02/data_profile.html](task-02/data_profile.html)
+
+<br>
+<br>
+As we can see (I'll use 'we' in many places), second and third column would be expressed better as powers of 10. <br>
+Also there are some corelations between column 1 and 2 and between 1 and 4, but I will not compress the number of features for now.<br>
+<br>
+It is remarkable that we can use column 1 and 2 alone for a base encodding on 5 or 6 qubits, but I am running out of time. 
+
 
 
 ***
@@ -16,7 +26,6 @@ To approach this task I used PennyLane framework, and 7 types of encoding, makin
 ### Angle Encoding - 2 qubits - Custom Circuit
 
 __Notebook__: [md-task-02-angle-encoding-2-qubits.ipynb](https://github.com/mariandumitrascu/qosf-challenge-2022-md/blob/main/task-02/md-task-02-angle-encoding-2-qubits.ipynb)
-__Notebook__: [md-task-02-angle-encoding-2-qubits.ipynb](./task-02/md-task-02-angle-encoding-2-qubits.ipynb)
 <br>
 <br>
 Circuit coding for angle encoding follows [pennylane technique](https://pennylane.ai/qml/demos/tutorial_variational_classifier.html), whch is also following the scheme in in [Schuld and Petruccione (2018)](https://link.springer.com/book/10.1007/978-3-319-96424-9). Controlled Y rotations are also decomposed using [Nielsen and Chuang (2010)](http://www.michaelnielsen.org/qcqi/)
