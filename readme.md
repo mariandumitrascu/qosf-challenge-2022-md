@@ -10,14 +10,15 @@ You can find task definition [here](https://github.com/mariandumitrascu/qosf-cha
 To approach this task I used PennyLane framework, and 7 types of encoding, making use of all out of the box PennyLane embedding functions (with the exception of basis encoding) as well as one angle encoding from scratch. I wanted to use this opportunity to go through all options available at this time regarding Variational Circuits Classifiers, and PennyLane framework provides this.
 
 <br><br>
-You can see the data profile in: [./task-02/data_profile.html](task-02/data_profile.html)
+You can see the data profile in: [./task-02/md-task-02-data-profile.ipynb](./task-02/md-task-02-data-profile.ipynb). It also saved in ./task-02/data_profile.html, but it will not show in GitHub. You can see it if you clone the project and load it loclly.
 
 <br>
 <br>
-As we can see (I'll use 'we' in many places), second and third column would be expressed better as powers of 10. <br>
+As you can see, second and third column would be expressed better as powers of 10. <br>
 Also there are some corelations between column 1 and 2 and between 1 and 4, but I will not compress the number of features for now.<br>
 <br>
-It is remarkable that we can use column 1 and 2 alone for a base encodding on 5 or 6 qubits, but I am running out of time. 
+It is remarkable that we can use column 1 and 2 alone for a base encodding on 5 or 6 qubits, but I am running out of time.<br>
+
 
 
 
@@ -112,7 +113,7 @@ References:
 __Notebook__: [md-task-02-qaoa-encoding-4-qubits.ipynb](https://github.com/mariandumitrascu/qosf-challenge-2022-md/blob/main/task-02/md-task-02-qaoa-encoding-4-qubits.ipynb)
 <br>
 <br>
-This is using Hamiltonian embedding and is inspired by QAOA algorithms. **qml.QAOAEmbedding** function performs both learning and encodding.
+This is using Hamiltonian embedding and is inspired by QAOA algorithms. **qml.QAOAEmbedding** function performs both learning and encodding. This is the worst performing in our dataset, or I am doing something wrong.
 <br>
 <br>
 References:
@@ -120,7 +121,21 @@ References:
 [qml.QAOAEmbedding](https://pennylane.readthedocs.io/en/stable/code/api/pennylane.QAOAEmbedding.html)
 
 
+## Some Conclusions
 
-```python
+I say _some_ because there is a lot more I could draw from this exercise if I'd put more time. Generally I did not spend nearly as much as I should, optimizing hyperparameters, so the value of accuracy on the test data is maximum 0.95. Accuracy and overtraining depends on number of layers and there is an optimum value for each case. This is the next thing I will focus on.
+<br>
+<br>
+Basis state encoding is the big mising. I will try to finish it in thext few days, using column 1 and 2, and eventually 3 (since it has only 19 distict values)
+<br>
+<br> The best performing configurations are:
+* Angle encoding on 2 qubits using the custom circuit and 4 layers
+* Aplitude Encoding on 2 qubits and 4 layers, 
+* Amplitude Displacement on 4 qubits and  8layers (using gaussian simulator)
 
-```
+
+<br><br>
+I would be intersting comparing various real quantum devices on various encodings.
+
+
+
