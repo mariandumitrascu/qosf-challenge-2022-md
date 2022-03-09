@@ -1,6 +1,6 @@
 # QOSF Mentorship Program - 2022 Challenge - Marian Dumitrascu
 
-## Task 3 - Encoding and Classifier
+## Task 2 - Encoding and Classifier
 
 You can find task definition [here](https://github.com/mariandumitrascu/qosf-challenge-2022-md/blob/main/Cohort%205%20Screening%20Tasks.pdf)
 
