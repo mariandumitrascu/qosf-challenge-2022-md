@@ -1,4 +1,5 @@
-# QOSF Mentorship Program - 2022 Challenge - Marian Dumitrascu
+# QOSF Mentorship Program - 2022 Challenge
+#### Marian Dumitrascu
 
 ## Task 2 - Encoding and Classifier
 
